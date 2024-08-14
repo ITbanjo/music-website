@@ -14,14 +14,16 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #050505;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: Roboto, sans-serif;
+  
 }
 
 .App-link {
@@ -36,3 +38,23 @@
     transform: rotate(360deg);
   }
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a, li, h1 {
+  color: #f3f3f3;
+  font-family: roboto;
+
+}
+
+a:hover {
+  color: #958969
+}
+
+
+
+
