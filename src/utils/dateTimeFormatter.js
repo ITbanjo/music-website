@@ -1,25 +1,34 @@
-function dateTimeFormatter(inputDateTime) {
-  // Handle Time
-  const hours = inputDateTime.substr(11, 2);
-  const minutes = inputDateTime.substr(14, 2);
-  let formattedTime;
-
-  if (hours < 12) {
-    formattedTime = `${hours}:${minutes} AM`;
-  }
-  if (hours == 12) {
-    formattedTime = `${hours}:${minutes} PM`;
-  }
-  if (hours > 12) {
-    formattedTime = `${Number(hours) - 12}:${minutes} PM`;
-  }
-
+export function dateFormatter(inputDateTime) {
   // Handle Date
+  if (!inputDateTime) return null;
   const year = inputDateTime.substr(0, 4);
   let month = inputDateTime.substr(5, 2).replace(/^0+/, "");
   const day = inputDateTime.substr(8, 2).replace(/^0+/, "");
 
-  return `${monthNames(month)} ${day}, ${year} - ${formattedTime}`;
+  return `${monthNames(month)} ${day}, ${year}`;
+}
+
+export function timeFormatter(inputDateTime = "") {
+  // Handle Time
+  if (inputDateTime.length === 10) return "TBD";
+  const hours = inputDateTime.substr(11, 2);
+  const minutes = inputDateTime.substr(14, 2);
+
+  if (!hours && !minutes) {
+    return null;
+  }
+  if (hours === "00") {
+    return `12:${minutes} AM`;
+  }
+  if (hours === "12") {
+    return `${hours}:${minutes} PM`;
+  }
+  if (hours < "12") {
+    return `${hours}:${minutes} AM`;
+  }
+  if (hours > "12") {
+    return `${Number(hours) - 12}:${minutes} PM`;
+  }
 }
 
 function monthNames(month) {
@@ -50,5 +59,3 @@ function monthNames(month) {
       return "Dec";
   }
 }
-
-export default dateTimeFormatter;

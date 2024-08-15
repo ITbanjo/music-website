@@ -10,7 +10,7 @@ function Layout() {
   return (
     <div className="App-header">
       <Header />
-      <body className="bg-transparent">
+      <body className="container bg-transparent">
         <Routes>
           <Route exact={true} path="/" element={<ShowsList />}></Route>
           <Route exact={true} path="/about" element={<About />}></Route>
