@@ -3,15 +3,15 @@ import { getAllCalendarEvents } from "../utils/api";
 import Show from "./Show";
 
 function ShowsList() {
-  const [dates, setDates] = useState(null);
+  const [events, setEvents] = useState(null);
 
   useEffect(loadEvents, []);
 
   function loadEvents() {
-    getAllCalendarEvents().then(setDates).then(console.log(dates));
+    getAllCalendarEvents().then(setEvents).then(console.log(events));
   }
 
-  return !dates ? (
+  return !events ? (
     <div className="text-center my-5">
       <div className="spinner-border" role="status">
         <span className="sr-only">Loading...</span>
@@ -21,8 +21,8 @@ function ShowsList() {
     <div className="container">
       <h1 className="text-center my-5">Dates</h1>
       <ul className="list-group">
-        {dates.map((date) => (
-          <Show date={date} />
+        {events.map((event) => (
+          <Show event={event} />
         ))}
       </ul>
     </div>

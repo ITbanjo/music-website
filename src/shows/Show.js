@@ -1,26 +1,18 @@
 import React from "react";
 import { dateFormatter, timeFormatter } from "../utils/dateTimeFormatter";
 
-function Show({ date }) {
-  const bandName = date.description;
-  const venue = date.location
-    ? date.location.substring(0, date.location.indexOf(","))
+function Show({ event }) {
+  const bandName = event.description;
+  const venue = event.location
+    ? event.location.substring(0, event.location.indexOf(","))
     : "";
 
-  // Handle dates with no time
-  let startDateTime = date.start.dateTime;
-  let endDateTime = date.end.dateTime;
-
-  if (date.start.date) {
-    startDateTime = date.start.date;
-    endDateTime = date.end.date;
-  } else {
-    startDateTime = date.start.dateTime;
-    endDateTime = date.end.dateTime;
-  }
+  // Handles dates with no time
+  const startDateTime = event.start.dateTime || event.start.date;
+  const endDateTime = event.end.dateTime || event.end.date;
 
   function linkGoogleMaps(address = "") {
-    const formattedAddress = address.replace("&", "and");
+    const formattedAddress = address.replace("&", "and"); // Removes '&' so that hyperlink will work correctly
 
     return `https://maps.google.com/?q=${formattedAddress}`;
   }
@@ -55,7 +47,7 @@ function Show({ date }) {
         {timeFormatter(startDateTime)} - {timeFormatter(endDateTime)}
       </div>
       <div className="col-3">
-        <a href={linkGoogleMaps(date.location)} target="_blank">
+        <a href={linkGoogleMaps(event.location)} target="_blank">
           {venue}
         </a>
       </div>
