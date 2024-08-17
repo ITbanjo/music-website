@@ -6,11 +6,23 @@ function Show({ date }) {
   const venue = date.location
     ? date.location.substring(0, date.location.indexOf(","))
     : "";
-  const startDateTime = date.start.dateTime;
-  const endDateTime = date.end.dateTime;
 
-  function linkGoogleMaps(address) {
-    return `https://maps.google.com/?q=${address}`;
+  // Handle dates with no time
+  let startDateTime = date.start.dateTime;
+  let endDateTime = date.end.dateTime;
+
+  if (date.start.date) {
+    startDateTime = date.start.date;
+    endDateTime = date.end.date;
+  } else {
+    startDateTime = date.start.dateTime;
+    endDateTime = date.end.dateTime;
+  }
+
+  function linkGoogleMaps(address = "") {
+    const formattedAddress = address.replace("&", "and");
+
+    return `https://maps.google.com/?q=${formattedAddress}`;
   }
 
   function linkBandWebsite(band = "") {
@@ -27,6 +39,9 @@ function Show({ date }) {
     }
     if (name.includes("penny creek")) {
       return "https://pennycreekband.com/";
+    }
+    if (name.includes("deano")) {
+      return "https://deanograham.hearnow.com/";
     }
   }
 
