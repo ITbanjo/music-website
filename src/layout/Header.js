@@ -4,22 +4,25 @@ import { Link } from "react-router-dom";
 
 function Header() {
   const style = {
-    fontSize: "calc(30px + 2vmin)",
+    fontSize: "calc(20px + 3vmin)",
     backgroundImage: "linear-gradient(to right, #050505 , #2F2B21)",
   };
 
   return (
     <header>
       <div
-        className="d-flex align-items-center border-bottom border-dark"
+        className="d-md-flex d-flex-column  align-items-center border-bottom border-dark"
         style={style}
       >
-        <div className="col-3">
-          <img src={isaacbw} />
+        <div className="col-md-3 p-0">
+          <img src={isaacbw} className="w-100" />
         </div>
 
-        <div className="col-9">
-          <h1>Isaac Taylor Music</h1>
+        <div
+          className="col-md-9 text-center py-2"
+          style={{ fontSize: "calc(20px + 4vmin)" }}
+        >
+          Isaac Taylor Music
         </div>
       </div>
 

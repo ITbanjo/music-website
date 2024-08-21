@@ -39,20 +39,29 @@ function Show({ event }) {
 
   return (
     <li
-      className="list-group-item mb-1 d-flex flex-row align-items-center"
+      className="list-group-item mb-1 d-md-flex"
       style={{ backgroundColor: "#252120" }}
     >
-      <div className="col-3">{dateFormatter(startDateTime)}</div>
-      <div className="col-3">
+      <div className="col-md-3">{dateFormatter(startDateTime)}</div>
+      <div className="col-md-3">
         {timeFormatter(startDateTime)} - {timeFormatter(endDateTime)}
       </div>
-      <div className="col-3">
-        <a href={linkGoogleMaps(event.location)} target="_blank">
+
+      <div className="col-md-3">
+        <a
+          className="hyper-link"
+          href={linkGoogleMaps(event.location)}
+          target="_blank"
+        >
           {venue}
         </a>
       </div>
-      <div className="col-3">
-        <a href={linkBandWebsite(bandName)} target="_blank">
+      <div className="col-md-3">
+        <a
+          className="hyper-link"
+          href={linkBandWebsite(bandName)}
+          target="_blank"
+        >
           {bandName}
         </a>
       </div>
