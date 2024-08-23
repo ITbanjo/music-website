@@ -37,13 +37,31 @@ function Show({ event }) {
     }
   }
 
+  function parseCityState() {
+    if (!event.location) return "";
+
+    const addressArray = event.location.split("");
+    const reverseArray = addressArray.reverse();
+
+    const state = reverseArray.slice(11, 13).reverse().join("");
+    const reverseArrayCity = reverseArray.slice(15);
+    const city = reverseArrayCity
+      .slice(0, reverseArrayCity.indexOf(","))
+      .reverse()
+      .join("");
+
+    return `${city}, ${state}`;
+  }
+
   return (
     <li
       className="list-group-item mb-1 d-md-flex"
       style={{ backgroundColor: "#252120" }}
     >
-      <div className="col-md-3">{dateFormatter(startDateTime)}</div>
-      <div className="col-md-3">
+      <div className="col-md-2 font-weight-bold">
+        {dateFormatter(startDateTime)}
+      </div>
+      <div className="col-md-2">
         {timeFormatter(startDateTime)} - {timeFormatter(endDateTime)}
       </div>
 
@@ -56,6 +74,7 @@ function Show({ event }) {
           {venue}
         </a>
       </div>
+      <div className="col-md-2">{parseCityState()}</div>
       <div className="col-md-3">
         <a
           className="hyper-link"

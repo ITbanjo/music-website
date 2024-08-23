@@ -26,7 +26,10 @@ function Header() {
         <div className="p-5"></div>
         <div className="p-5"></div>
 
-        <nav className="navbar navbar-expand-lg">
+        <nav
+          className="navbar justify-content-center"
+          style={{ background: "rgba(5, 5, 5, .5)" }}
+        >
           <ul className="nav">
             <li className="nav-item">
               <Link className="nav-link" to={"/"}>

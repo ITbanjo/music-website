@@ -5,8 +5,7 @@
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: #f3f3f3;
-  font-family: Roboto, sans-serif;
-  
+  font-family: Roboto, sans-serif;;
 }
 
 .hyper-link {
@@ -34,7 +33,7 @@ header {
   radial-gradient(rgba(255, 255, 255, 0), rgba(26, 16, 17, 0.24)),
   url('../images/banner-pic.jpg');
   background-size:cover;
-  background-position: 50% 15%;
+  background-position: 55% 15%;
 }
 
 
