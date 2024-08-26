@@ -5,22 +5,25 @@ import ShowsList from "../shows/ShowsList";
 import "@fontsource/roboto/300.css";
 import "./Layout.css";
 import About from "../about/About";
-import Footer from "./Footer";
+
 import Contact from "../contact/Contact";
+import Media from "../media/Media";
 
 function Layout() {
   return (
-    <div className="App-header">
+    <>
       <Header />
-      <body className="container bg-transparent">
+      <div className="container">
         <Routes>
           <Route exact={true} path="/" element={<ShowsList />}></Route>
           <Route exact={true} path="/about" element={<About />}></Route>
           <Route exact={true} path="/contact" element={<Contact />}></Route>
+          <Route exact={true} path="/media" element={<Media />}></Route>
         </Routes>
-      </body>
-      <Footer />
-    </div>
+      </div>
+
+      <div className="p-5"></div>
+    </>
   );
 }
 

@@ -1,6 +1,6 @@
 .App-header {
   background-color: #050505;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
@@ -28,7 +28,7 @@
   background-color:#958969
 }
 
-header {
+.header {
   background-image:
   radial-gradient(rgba(255, 255, 255, 0), rgba(26, 16, 17, 0.24)),
   url('../images/banner-pic.jpg');
@@ -36,6 +36,14 @@ header {
   background-position: 55% 15%;
 }
 
+
+.invert:hover {
+  filter: brightness(0.5)
+}
+
+body {
+  background-color: #050505;
+}
 
 a, p, li, h1, label {
   color: #f3f3f3;
