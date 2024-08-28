@@ -9,14 +9,51 @@ function About() {
         <img src={isaacAbout} className="col-md-6 pb-3" />
         <div className="col-md-6">
           <p>
-            Isaac Taylor is a Florida based folk musician specializing in
-            bluegrass, country and Americana. He is skilled at the 5-string
-            banjo, guitar, and lead/harmony vocals. With 18 years of
-            professional experience under his belt, Isaac has the ability to
-            seamlessly fit into any musical setting and deliver high-quality
-            performances.
+            Hi, I'm Isaac Taylor and I'm a Florida based musician specializing
+            in bluegrass, country and Americana. My main instrument is the
+            5-string banjo, but I play guitar as well, and am also a skilled
+            singer and harmony vocalist. I've been playing professionally for
+            about 18 years, and have experience working in a wide variety of
+            different musical settings. I am grateful for every opportunity to
+            entertain through music!
           </p>
-          <p>Bands I've played with...</p>
+
+          <p>
+            Throughout my career, I've had the privilege of working with many
+            great groups and artists, including Ernie Evans, Buddy Jewell, Billy
+            Droze, Remedy Tree, Rebekah Speer, Johnny and Jeanette Williams,
+            Dave Adkins, Penny Creek Band and many more...
+          </p>
+
+          <p>Checkout my current bands!</p>
+
+          <div>
+            <a
+              href="https://lowgroundband.com/"
+              className="hyper-link"
+              target="_blank"
+            >
+              Low Ground
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://deanograham.hearnow.com/"
+              className="hyper-link"
+              target="_blank"
+            >
+              Deano Graham & The Grass Wagon Revival
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://www.facebook.com/sunrisecitybluegrassband"
+              className="hyper-link"
+              target="_blank"
+            >
+              Sunrise City Bluegrass Band
+            </a>
+          </div>
         </div>
       </article>
     </div>
