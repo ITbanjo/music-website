@@ -10,12 +10,12 @@ function About() {
         <div className="col-md-6">
           <p>
             Hi, I'm Isaac Taylor and I'm a Florida based musician specializing
-            in bluegrass, country and Americana. My main instrument is the
-            5-string banjo, but I play guitar as well, and am also a skilled
-            singer and harmony vocalist. I've been playing professionally for
-            about 18 years, and have experience working in a wide variety of
-            different musical settings. I am grateful for every opportunity to
-            entertain through music!
+            in bluegrass, country, and Americana. My main instrument is the
+            5-string banjo, but I play guitar as well, and am a skilled singer
+            and harmony vocalist. I've been playing professionally for about 18
+            years, and have experience working in a wide variety of different
+            musical settings. I'm grateful for every opportunity to entertain
+            through music!
           </p>
 
           <p>

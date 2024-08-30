@@ -54,6 +54,16 @@ a:hover {
   color: #958969
 }
 
+.carousel-responsive {
+  height: 700px;
+}
+
+@media (max-width: 991.98px) { 
+  .carousel-responsive {
+    height: 400px;
+  }
+}
+
 
 
 
